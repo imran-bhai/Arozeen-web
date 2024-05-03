@@ -33,7 +33,7 @@ const LatestArticle = () => {
         </h3>
         <div className="w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-7">
           {Article.map((article, item) => (
-            <Link href={article.link}>
+            <Link href={article.link} key={item}>
               <div className="py-5 sm:py-0" key={item}>
                 <Image
                   src={article.img}

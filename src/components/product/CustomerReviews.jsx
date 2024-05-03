@@ -43,9 +43,9 @@ const CustomerReviews = () => {
                       of lightweight cloth like cotton, and has a collar,
                       sleeves, and a front opening. Shirts can be long- or short
                       -sleeved, and can have buttons or snaps down the front. In
-                      American English, the term "shirt" can refer to a wide
+                      American English, the term shirt can refer to a wide
                       variety of upper-body garments and undergarments, hile in
-                      British English, it's more specifically a garment with a
+                      British English, it&apos;s more specifically a garment with a
                       collar, sleeves with cuffs, and a full vertical opening.
                     </p>
                     <div className="text-[#214A25] flex items-center py-3 gap-x-2">
@@ -78,9 +78,9 @@ const CustomerReviews = () => {
                       of lightweight cloth like cotton, and has a collar,
                       sleeves, and a front opening. Shirts can be long- or short
                       -sleeved, and can have buttons or snaps down the front. In
-                      American English, the term "shirt" can refer to a wide
+                      American English, the term shirt can refer to a wide
                       variety of upper-body garments and undergarments, hile in
-                      British English, it's more specifically a garment with a
+                      British English, its more specifically a garment with a
                       collar, sleeves with cuffs, and a full vertical opening.
                     </p>
                     <div className="text-[#214A25] flex items-center py-3 gap-x-2">
@@ -112,9 +112,9 @@ const CustomerReviews = () => {
                       of lightweight cloth like cotton, and has a collar,
                       sleeves, and a front opening. Shirts can be long- or short
                       -sleeved, and can have buttons or snaps down the front. In
-                      American English, the term "shirt" can refer to a wide
+                      American English, the term shirt can refer to a wide
                       variety of upper-body garments and undergarments, hile in
-                      British English, it's more specifically a garment with a
+                      British English, its more specifically a garment with a
                       collar, sleeves with cuffs, and a full vertical opening.
                     </p>
                     <div className="text-[#214A25] flex items-center py-3 gap-x-2">

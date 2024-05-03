@@ -50,7 +50,7 @@ export default function OrderTable() {
           >
             <div className="flex flex-row items-center space-x-4 mb-4 md:mb-0">
               <Image
-                alt="Men's Black T-Shirt"
+                alt="Mens Black T-Shirt"
                 className="w-16 h-20"
                 height="100"
                 src="/home/categories/bombers.png"
@@ -61,7 +61,9 @@ export default function OrderTable() {
                 width="80"
               />
               <div className="">
-                <h3 className="text-lg font-semibold">Men's Black T-Shirt</h3>
+                <h3 className="text-lg font-semibold">
+                  Men&apos;s Black T-Shirt
+                </h3>
                 <p className="text-sm text-gray-500">T-Shart</p>
               </div>
             </div>
@@ -132,10 +134,11 @@ export default function OrderTable() {
                 </Button>
                 {selectedFile && (
                   <div className="mt-4">
-                    <img
+                    <Image
                       src={URL.createObjectURL(selectedFile)}
                       alt="Selected"
                       className="max-w-xs"
+                      layout="true"
                     />
                   </div>
                 )}
@@ -184,7 +187,7 @@ export default function OrderTable() {
           >
             <div className="flex flex-row items-center space-x-4 mb-4 md:mb-0">
               <Image
-                alt="Men's Black T-Shirt"
+                alt="Mens Black T-Shirt"
                 className="w-16 h-20"
                 height="100"
                 src="/home/categories/bombers.png"
@@ -195,7 +198,9 @@ export default function OrderTable() {
                 width="80"
               />
               <div className="">
-                <h3 className="text-lg font-semibold">Men's Black T-Shirt</h3>
+                <h3 className="text-lg font-semibold">
+                  Men&apos;s Black T-Shirt
+                </h3>
                 <p className="text-sm text-gray-500">T-Shart</p>
               </div>
             </div>
@@ -267,7 +272,7 @@ export default function OrderTable() {
                 </Button>
                 {selectedFile && (
                   <div className="mt-4">
-                    <img
+                    <Image
                       src={URL.createObjectURL(selectedFile)}
                       alt="Selected"
                       className="max-w-xs"
@@ -329,7 +334,9 @@ export default function OrderTable() {
                 width="80"
               />
               <div className="">
-                <h3 className="text-lg font-semibold">Men's Black T-Shirt</h3>
+                <h3 className="text-lg font-semibold">
+                  Men&apos;s Black T-Shirt
+                </h3>
                 <p className="text-sm text-gray-500">T-Shart</p>
               </div>
             </div>
@@ -403,10 +410,11 @@ export default function OrderTable() {
                 </Button>
                 {selectedFile && (
                   <div className="mt-4">
-                    <img
+                    <Image
                       src={URL.createObjectURL(selectedFile)}
                       alt="Selected"
                       className="max-w-xs"
+                      layout="true"
                     />
                   </div>
                 )}

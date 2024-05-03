@@ -4,9 +4,9 @@ import StoreInfo from "./StoreInfo";
 import Image from "next/image";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 
-const DescriptionReviews = ({product}) => {
+const DescriptionReviews = ({ product }) => {
   const [activeLink, setActiveLink] = useState("Description");
- 
+
   return (
     <MaxWidthWrapper className="">
       <div className="flex flex-col lg:gap-x-32  lg:flex-row lg:justify-center lg:items-center ">
@@ -206,8 +206,8 @@ const DescriptionReviews = ({product}) => {
                 lightweight cloth like cotton, and has a collar, sleeves, and a
                 front opening. Shirts can be long- or short -sleeved, and can
                 have buttons or snaps down the front. In American English, the
-                term "shirt" can refer to a wide variety of upper-body garments
-                and undergarments, hile in British English, it's more
+                term shirt can refer to a wide variety of upper-body garments
+                and undergarments, hile in British English, it&quot;s more
                 specifically a garment with a collar, sleeves with cuffs, and a
                 full vertical opening.
               </div>
@@ -288,7 +288,7 @@ const DescriptionReviews = ({product}) => {
         </div>
 
         <div className="lg:flex-1">
-          <StoreInfo product={product}/>
+          <StoreInfo product={product} />
         </div>
       </div>
     </MaxWidthWrapper>

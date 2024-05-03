@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Button } from "../ui/button";
 import Countdown from "react-countdown";
 
 const Promotions = () => {
-  const endDate = new Date("2024-05-03 12:00:00");
+  // Use useMemo to memoize the endDate
+  const endDate = useMemo(() => new Date("2024-05-03 12:00:00"), []);
   const [remainingTime, setRemainingTime] = useState({
     days: 0,
     hours: 0,

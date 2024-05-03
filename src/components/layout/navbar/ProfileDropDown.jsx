@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -21,11 +21,11 @@ export function ProfileDropDown() {
   const [token, setToken] = useState("");
   const router = useRouter();
 
-  const handleLogout = async () => {
+  const handleLogout = useCallback(async () => {
     logout();
     toast.success("Logged out successfully");
     router.push("/login");
-  };
+  },[router]);
 
   const handleLogin = () => {
     router.push("/login");

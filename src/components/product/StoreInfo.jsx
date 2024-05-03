@@ -12,6 +12,7 @@ const StoreInfo = ({product}) => {
           <div className="rounded-full">
             <Image
               src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${product.images[0].image}`}
+              alt="image"
               width={50}
               height={50}
               className="object-cover rounded-full h-12 w-12 pt-1 "

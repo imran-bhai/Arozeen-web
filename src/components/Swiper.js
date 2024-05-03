@@ -12,10 +12,10 @@ import img1 from "../../public/home/heroSlider/img1.jpg";
 import img2 from "../../public/home/heroSlider/img2.jpg";
 import img3 from "../../public/home/heroSlider/img6.jpg";
 import img4 from "../../public/home/heroSlider/Slider.svg";
-import img5 from "../../public/home/heroSlider/Slider3.png";
+
 import { set } from "lodash";
 
-const slides = [img1, img2, img3, img4, img5];
+const slides = [img1, img2, img3, img4];
 
 const Slider = () => {
   const [swiper, setSwiper] = useState(null);

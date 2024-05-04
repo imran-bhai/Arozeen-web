@@ -3,9 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import Image from "next/image";
-import StarRating from "./product/StarRating";
-import { useState, useRef } from "react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
+import StarRating from "../product/StarRating";
+import { useState, useRef, useEffect } from "react";
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import axios from "axios";
+import { getToken } from "@/app/config/actions";
+import BreadcrumbCustome from "../BreadcrumbCustome";
 
 export default function OrderTable() {
   const fileInputRef = useRef(null);
@@ -26,12 +29,38 @@ export default function OrderTable() {
     setFormID(id);
     setExpand(!expand);
   };
+
+  const fetchOrders = async () => {
+    try {
+      const token = await getToken();
+      const response = await axios.get(
+        `${process.env.NEXT_PUBLIC_BASE_URL}all-orders`,
+        {
+          headers: {
+            Authorization: `Bearer ${token.tokenId}`,
+          },
+        }
+      );
+      setOrders(response.data);
+    } catch (err) {
+      console.error("Error fetching orders:", err);
+      // Handle the error gracefully, e.g., display an error message to the user
+    }
+  };
+
+  useEffect(() => {
+    console.log("url:", process.env.NEXT_PUBLIC_BASE_URL);
+    fetchOrders();
+  }, []);
+
   return (
     <MaxWidthWrapper>
+     
       <div className="bg-gray-50 p-6">
-        {/* Order 1  */}
-
+        
+        <BreadcrumbCustome />
         <div className="">
+
           <div className="flex justify-between items-center">
             <div className="flex  md:space-x-6 py-5">
               <p className="">
@@ -51,7 +80,7 @@ export default function OrderTable() {
             <div className="flex flex-row items-center space-x-4 mb-4 md:mb-0">
               <Image
                 alt="Mens Black T-Shirt"
-                className="w-16 h-20"
+                className="w-16 h-20 border border-primary"
                 height="100"
                 src="/home/categories/bombers.png"
                 style={{
@@ -188,7 +217,7 @@ export default function OrderTable() {
             <div className="flex flex-row items-center space-x-4 mb-4 md:mb-0">
               <Image
                 alt="Mens Black T-Shirt"
-                className="w-16 h-20"
+                className="w-16 h-20 border border-primary"
                 height="100"
                 src="/home/categories/bombers.png"
                 style={{
@@ -324,7 +353,7 @@ export default function OrderTable() {
             <div className="flex flex-row items-center space-x-4 mb-4 md:mb-0">
               <Image
                 alt="Men's Black T-Shirt"
-                className="w-16 h-20"
+                className="w-16 h-20 border border-primary"
                 height="100"
                 src="/home/categories/bombers.png"
                 style={{

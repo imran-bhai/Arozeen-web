@@ -30,6 +30,7 @@ export function ProductDescription({ product, productId }) {
   return (
     <>
       <div className="mb-6 flex flex-col border-b pb-6 dark:border-neutral-700">
+       
         <div className="">
           <div className="lg:flex lg:justify-between ">
             <h1 className="mb-2 text-2xl sm:text-3xl lg:w-60 lg:text-xl font-medium text-center sm:text-start">

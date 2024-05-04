@@ -59,7 +59,7 @@ const Slider = () => {
           }}
           onSwiper={(swiper) => setSwiper(swiper)}
           modules={[Autoplay, Pagination, Navigation]}
-          className="h-[30vh] sm:h-[70vh] md:h-[40vh] lg:h-[83vh]"
+          className="h-[30vh] sm:h-[70vh] md:h-[40vh] lg:h-[84vh]"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className="">

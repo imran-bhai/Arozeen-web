@@ -26,7 +26,7 @@ export default function Cart() {
               Authorization: `Bearer ${token}`,
             },
           });
-          console.log("asfand:",response.data)
+
           setCartItems(response.data.data.cart_items); // Assuming the response contains cart items
         }
 
@@ -38,7 +38,6 @@ export default function Cart() {
     };
 
     fetchCartItems();
-    
   }, [newCartItems, cartProducts]);
 
   return (

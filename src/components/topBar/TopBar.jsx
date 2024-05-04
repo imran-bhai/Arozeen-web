@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import MaxWidthWrapper from "../MaxWidthWrapper";
+import Link from "next/link";
 
 const TopBar = () => {
   return (
@@ -11,7 +12,7 @@ const TopBar = () => {
             <h3 className="text-secondary">Call us: +92 325 6969288</h3>
           </div>
           <div className="text-secondary flex">
-            Sign up and GET  OFF for your first order. <span className="text-green-900 underline ml-1"> Sign up now</span>
+          Sign up and GET  OFF for your first order. <Link href="/register"><span className="text-green-900 underline ml-1 cursor-pointer"> Sign up now</span></Link>
           </div>
           <div className="flex flex-row gap-x-2">
             <Image

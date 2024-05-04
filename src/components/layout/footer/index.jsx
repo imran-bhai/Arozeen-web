@@ -16,29 +16,29 @@ function Footer() {
         </div>
         <ul className="flex items-center justify-center flex-wrap space-x-4 py-5">
           <li>
-            <a href="#" className="text-base hover:underline">
+            <Link href="#" className="text-base hover:underline">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-base hover:underline">
+            <Link href="#" className="text-base hover:underline">
               Shop
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-base hover:underline">
+            <Link href="#" className="text-base hover:underline">
               Product
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-base hover:underline">
+            <Link href="#" className="text-base hover:underline">
               Blog
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-base hover:underline">
+            <Link href="#" className="text-base hover:underline">
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

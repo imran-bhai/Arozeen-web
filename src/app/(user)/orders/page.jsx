@@ -1,16 +1,14 @@
+"use client";
+import Orders from "@/components/orders/OrdersTable";
 
-"use client"
-import Orders from '@/components/OrdersTable'
-
-import React from 'react'
-
+import React from "react";
 
 const page = () => {
   return (
     <div className="">
-   <Orders />
-   </div>
-  )
-}
+      <Orders />
+    </div>
+  );
+};
 
-export default page
+export default page;

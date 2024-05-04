@@ -13,7 +13,7 @@ import { getToken } from "@/app/config/actions";
 import _ from "lodash";
 import Price from "../price";
 export default function CartModal({ cart,newCartItems,setNewCartItems }) {
-  console.log("cart:",cart);
+ 
   const [cartItems, setCartItems] = useState(cart);
   const [isOpen, setIsOpen] = useState(false);
   const [ordersLimit, setOrdersLimit] = useState(0)

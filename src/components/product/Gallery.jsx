@@ -5,6 +5,7 @@ import Link from "next/link";
 import { GridTileImage } from "../grid/Tile";
 import { useState } from "react";
 
+
 export function Gallery({ images }) {
   const [imageIndex, setImageIndex] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState(imageIndex);
@@ -35,6 +36,7 @@ export function Gallery({ images }) {
 
   return (
     <div className="lg:flex lg:flex-col lg:justify-center lg:items-center">
+     
       <div className="font-tec relative aspect-square   max-h-[500px] w-full lg:w-[80%] overflow-hidden">
         {images[selectedImageIndex] && (
           <Image

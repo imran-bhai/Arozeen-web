@@ -37,7 +37,7 @@ export function CarouselFeatured() {
 
     fetchCartItems();
   }, []);
-  console.log("cart:", cartItems);
+
   function extractFirstThreeWords(text) {
     const words = text
       .replace(/[^\w\s]|_/g, "")

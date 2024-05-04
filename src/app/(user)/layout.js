@@ -9,6 +9,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TopBar from "@/components/topBar/TopBar";
 
+import { cookies } from "next/headers";
+
 const inter = Inter({ subsets: ["latin"] });
 
 const tec = localfont({
@@ -28,6 +30,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const cookie = cookies();
+  const token = cookie.get("token");
   return (
     <html lang="en" className={`${tec.variable} h-full `}>
       <body
@@ -35,7 +39,7 @@ export default function RootLayout({ children }) {
       >
         <ToastContainer />
 
-        <TopBar />
+        {token ? "" : <TopBar />}
         <Navbar />
         <main className="relative flex flex-col min-h-screen">
           <div className="flex-grow flex-1">{children}</div>

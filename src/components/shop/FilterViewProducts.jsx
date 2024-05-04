@@ -131,9 +131,12 @@ const FilterViewProducts = () => {
                       >
                         {subCategories.map((category) => (
                           <li key={category.name}>
-                            <a href={category.href} className="block px-2 py-1">
+                            <Link
+                              href={category.href}
+                              className="block px-2 py-1"
+                            >
                               {category.name}
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>

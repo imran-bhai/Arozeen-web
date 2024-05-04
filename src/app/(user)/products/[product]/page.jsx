@@ -8,9 +8,7 @@ import { API_BASE_URL } from "@/app/config/constants";
 import RelatedProducts from "@/components/product/RelatedProducts";
 import CustomerReviews from "@/components/product/CustomerReviews";
 import DescriptionReviews from "@/components/product/DescriptionReviews";
-import { BreadcrumbCustome } from "@/components/BreadcrumbCustome";
-
-
+import BreadcrumbCustome from "@/components/BreadcrumbCustome";
 
 
 export default async function ProductPage({ params }) {
@@ -35,8 +33,9 @@ export default async function ProductPage({ params }) {
   return (
     <>
       <div className="mx-auto max-w-screen-2xl px-4 font-tec">
-        {/* <div className="py-3">
-      <BreadcrumbCustome /></div> */}
+        <div className="py-3">
+        <BreadcrumbCustome />
+        </div>
         <div className="flex flex-col rounded-lg border border-neutral-200 bg-white  dark:border-neutral-800 dark:bg-black md:p-12 lg:flex-row lg:gap-10">
           <div className="h-full w-full basis-full lg:basis-4/6">
             <Gallery
@@ -52,7 +51,7 @@ export default async function ProductPage({ params }) {
           </div>
         </div>
 
-        <DescriptionReviews product={product}/>
+        <DescriptionReviews product={product} />
         <div className="">
           <CustomerReviews />
         </div>

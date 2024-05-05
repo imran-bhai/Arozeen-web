@@ -2,10 +2,10 @@
 import React, { useState, useEffect, Suspense } from "react";
 import axios from "axios";
 import { API_BASE_URL } from "@/app/config/constants";
-import FilterViewProducts from "@/components/shop/FilterViewProducts";
 import Promotions from "@/components/shop/Promotions";
 import ShopCollectionInShop from "@/components/shop/ShopCollectionInShop";
-import Banner from "@/components/shop/Banner";
+import Banner from "@/components/product/ProductsBanner";
+import ShopFilterProducts from "@/components/product/ShopFilterProducts";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -36,12 +36,10 @@ const Products = () => {
   }, []);
   return (
     <div className="min-h-screen">
-      
-        <Banner />
-        <FilterViewProducts />
-        <Promotions />
-        <ShopCollectionInShop />
-  
+      <Banner />
+      <ShopFilterProducts />
+      <Promotions />
+      <ShopCollectionInShop />
     </div>
   );
 };

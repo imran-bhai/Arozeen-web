@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 
-const Banner = () => {
+const ProductsBanner = () => {
   return (
     <MaxWidthWrapper>
       <div className="relative flex justify-center items-center">
@@ -29,4 +29,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default ProductsBanner;

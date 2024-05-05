@@ -5,6 +5,7 @@ import MaxWidthWrapper from "../MaxWidthWrapper";
 import { Button } from "../ui/button";
 import ShippingCart from "./ShippingCart";
 import CheckOrder from "./CheckOrder";
+import ThankYouScreen from "./ThankYouScreen";
 
 const OrderStatus = () => {
   const [active, setActive] = useState(0);
@@ -60,10 +61,9 @@ const OrderStatus = () => {
         </div>
       </div>
 
-     
-
-      <ShippingCart />
-      <CheckOrder />
+      {active == 0 ? <ShippingCart /> : ""}
+      {active == 1 ? <CheckOrder /> : ""}
+      {active == 2 ? <ThankYouScreen /> : ""}
     </MaxWidthWrapper>
   );
 };

@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 const CheckOrder = () => {
   return (
-    <div>
+    <div className="mt-12">
       <div className="flex gap-x-5 justify-center">
         <div className="relative">
           <div className="absolute right-2 font-semibold  -top-7 h-7 w-7 rounded-full bg-[#214A25] flex justify-center items-center text-secondary">

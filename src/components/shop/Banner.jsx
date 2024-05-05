@@ -7,7 +7,7 @@ const Banner = () => {
     <MaxWidthWrapper>
       <div className="relative flex justify-center items-center">
         <Image
-          src="/shop/banner.png"
+          src="/shop/product-banner.png"
           alt="shop banner"
           width={800}
           height={800}

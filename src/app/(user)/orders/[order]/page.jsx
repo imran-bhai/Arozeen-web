@@ -17,6 +17,7 @@ const page = () => {
             Your Order is Processing
           </h4>
           <OrderStatus />
+          
         </div>
       </div>
     </MaxWidthWrapper>

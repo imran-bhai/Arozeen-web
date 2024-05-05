@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+ 
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,jsx}",
@@ -15,7 +16,7 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xsm": "375px",
-        "xsm": "425px",
+        xsm: "425px",
         "2xl": "1400px",
         "3xl": "2000px",
       },
@@ -23,6 +24,14 @@ module.exports = {
         "flex overflow-hidden w-full h-[300px] md:h-[400px] lg:h-[500px] relative",
     },
     extend: {
+      flexBasis: {
+        '1/7': '14.2857143%',
+        '2/7': '28.5714286%',
+        '3/7': '42.8571429%',
+        '4/7': '57.1428571%',
+        '5/7': '71.4285714%',
+        '6/7': '85.7142857%',
+      },
       fontFamily: {
         tec: ["var(--font-tec)"],
         poppins: ["Poppins", "sans-serif"],
@@ -83,5 +92,6 @@ module.exports = {
       },
     },
   },
+
   plugins: [require("tailwindcss-animate")],
 };

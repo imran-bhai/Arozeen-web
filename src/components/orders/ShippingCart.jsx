@@ -19,7 +19,7 @@ const ShippingCart = () => {
 
     <div
       id="order1"
-      className="bg-[#F3F5F7] py-4 md:py-0 flex flex-col md:flex-row md:items-center md:justify-between md:space-x-6"
+      className="bg-[#F3F5F7] p-4 md:py-0 flex flex-col md:flex-row md:items-center md:justify-between md:space-x-6"
     >
       <div className="flex flex-row items-center space-x-4 mb-4 md:mb-0">
         <Image
@@ -65,7 +65,7 @@ const ShippingCart = () => {
 
   
   </div>
-    <div className="flex mt-8">
+    <div className="flex mt-8 ">
     <div className="basis-1/3 text-start">
       <h3 className="text-lg font-semibold">Delivery</h3>
       <h4 className="text-md text-gray-700">Address</h4>

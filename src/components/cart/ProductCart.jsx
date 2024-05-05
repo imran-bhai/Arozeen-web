@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-import MaxWidthWrapper from "../MaxWidthWrapper";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import StarRating from "../product/StarRating";
-import { ArrowRight } from "lucide-react";
+
 
 function extractFirstThreeWords(text) {
   const words = text

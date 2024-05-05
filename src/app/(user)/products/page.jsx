@@ -2,10 +2,10 @@
 import React, { useState, useEffect, Suspense } from "react";
 import axios from "axios";
 import { API_BASE_URL } from "@/app/config/constants";
-import Banner from "@/components/shop/Banner";
 import FilterViewProducts from "@/components/shop/FilterViewProducts";
 import Promotions from "@/components/shop/Promotions";
 import ShopCollectionInShop from "@/components/shop/ShopCollectionInShop";
+import Banner from "@/components/shop/Banner";
 
 const Products = () => {
   const [products, setProducts] = useState([]);

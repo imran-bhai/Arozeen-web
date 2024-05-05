@@ -45,6 +45,17 @@ export default function Navbar() {
               Products
             </Link>
 
+
+            <Link
+              href="/shop"
+              className={`text-neutral-600 text-[1rem] font-semibold underline-offset-4 hover:text-orange-600  hover:underline dark:text-neutral-400 dark:hover:text-neutral ${
+                pathname === "/shop" ? "underline text-orange-600" : ""
+              }`}
+            >
+              Shop
+            </Link>
+
+
             <Link
               href="/orders"
               className={`text-neutral-600 text-[1rem] font-semibold underline-offset-4 hover:text-orange-600  hover:underline dark:text-neutral-400 dark:hover:text-neutral ${

@@ -3,10 +3,11 @@ import Image from "next/image";
 import React, { useState, useEffect, useMemo } from "react";
 import { Button } from "../ui/button";
 import Countdown from "react-countdown";
+import Link from "next/link";
 
 const Promotions = () => {
   // Use useMemo to memoize the endDate
-  const endDate = useMemo(() => new Date("2024-05-03 12:00:00"), []);
+  const endDate = useMemo(() => new Date("2024-05-15 12:00:00"), []);
   const [remainingTime, setRemainingTime] = useState({
     days: 0,
     hours: 0,
@@ -60,25 +61,45 @@ const Promotions = () => {
         </h3>
         <div className="flex gap-x-3">
           <div className="text-secondary py-1 text-center">
-            <div id="days" className="h-12 w-12 md:h-16 lg:w-24 md:w-16 lg:h-24 bg-secondary text-black flex items-center justify-center text-xl md:text-3xl font-semibold">
+            <div
+              id="days"
+              className="h-12 w-12 md:h-16 lg:w-24 md:w-16 lg:h-24 bg-secondary text-black flex items-center justify-center text-xl md:text-3xl font-semibold"
+            >
               {remainingTime.days}
             </div>
             Days
           </div>
           <div className="text-secondary py-1 text-center">
-            <div id="hours" className="h-12 w-12 md:h-16 lg:w-24 md:w-16 lg:h-24 bg-secondary text-black flex items-center justify-center text-xl md:text-3xl font-semibold">{remainingTime.hours}</div>
+            <div
+              id="hours"
+              className="h-12 w-12 md:h-16 lg:w-24 md:w-16 lg:h-24 bg-secondary text-black flex items-center justify-center text-xl md:text-3xl font-semibold"
+            >
+              {remainingTime.hours}
+            </div>
             Hours
           </div>
           <div className="text-secondary py-1 text-center">
-            <div id="minutes" className="h-12 w-12 md:h-16 lg:w-24 md:w-16 lg:h-24 bg-secondary text-black flex items-center justify-center text-xl md:text-3xl font-semibold">{remainingTime.minutes}</div>
+            <div
+              id="minutes"
+              className="h-12 w-12 md:h-16 lg:w-24 md:w-16 lg:h-24 bg-secondary text-black flex items-center justify-center text-xl md:text-3xl font-semibold"
+            >
+              {remainingTime.minutes}
+            </div>
             Minutes
           </div>
           <div className="text-secondary py-1 text-center">
-            <div id="seconds" className="h-12 w-12 md:h-16 lg:w-24 md:w-16 lg:h-24 bg-secondary text-black flex items-center justify-center text-xl md:text-3xl font-semibold">{remainingTime.seconds}</div>
+            <div
+              id="seconds"
+              className="h-12 w-12 md:h-16 lg:w-24 md:w-16 lg:h-24 bg-secondary text-black flex items-center justify-center text-xl md:text-3xl font-semibold"
+            >
+              {remainingTime.seconds}
+            </div>
             Seconds
           </div>
         </div>
-        <Button className="w-32 h-10 my-3">Shop Now</Button>
+        <Link href="/shop">
+          <Button className="w-32 h-10 my-3">Shop Now</Button>
+        </Link>
       </div>
     </div>
   );

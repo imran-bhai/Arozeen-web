@@ -5,11 +5,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Link from "next/link";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { GridTileImage } from "../grid/Tile";
+import { Autoplay, Pagination } from "swiper/modules";
 import { API_BASE_URL } from "@/app/config/constants";
 import Image from "next/image";
-import StarRating from "./StarRating";
+import dynamic from "next/dynamic";
+
+
+const StarRating = dynamic(() => import("./StarRating",{ssr:flase}))
+
 
 export default function RelatedProducts({ id, heading }) {
   const [products, setProducts] = useState([]);

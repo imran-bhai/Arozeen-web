@@ -14,6 +14,8 @@ import ProductCart from "../cart/ProductCart";
 import { API_BASE_URL } from "@/app/config/constants";
 import axios from "axios";
 import Image from "next/image";
+import DropDownFilterIcon from "../iconSVG/DropDownFilterIcon";
+import DropUpFilterIcon from "../iconSVG/DropUpFilterIcon";
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -48,18 +50,7 @@ const filters = [
       { value: "accessories", label: "Accessories", checked: false },
     ],
   },
-  {
-    id: "size",
-    name: "Size",
-    options: [
-      { value: "2l", label: "2L", checked: false },
-      { value: "6l", label: "6L", checked: false },
-      { value: "12l", label: "12L", checked: false },
-      { value: "18l", label: "18L", checked: false },
-      { value: "20l", label: "20L", checked: false },
-      { value: "40l", label: "40L", checked: true },
-    ],
-  },
+
   {
     id: "color",
     name: "Color",
@@ -73,6 +64,21 @@ const filters = [
     ],
   },
 ];
+
+const filtersColors = [
+  {
+    id: "size",
+    name: "Size",
+    options: [
+      { value: "2l", label: "2L", checked: false },
+      { value: "6l", label: "6L", checked: false },
+      { value: "12l", label: "12L", checked: false },
+      { value: "18l", label: "18L", checked: false },
+      { value: "20l", label: "20L", checked: false },
+      { value: "40l", label: "40L", checked: true },
+    ],
+  },
+]
 
 const productData = {
   name: "Awesome T-Shirt",
@@ -339,59 +345,45 @@ export default function ShopFilterProducts() {
                             </span>
                             <span className="ml-6 flex items-center">
                               {open ? (
-                                <MinusIcon
-                                  className="h-5 w-5"
-                                  aria-hidden="true"
-                                />
+                                <DropUpFilterIcon />
                               ) : (
-                                <PlusIcon
-                                  className="h-5 w-5"
-                                  aria-hidden="true"
-                                />
+                                <DropDownFilterIcon />
                               )}
                             </span>
                           </Disclosure.Button>
                         </h3>
                         <Disclosure.Panel className="pt-6">
-                          <div className="grid gap-3 lg:grid-cols-3">
+                          <div className="">
                             {section.options.map((option, optionIdx) => (
                               <div
                                 key={option.value}
                                 className="flex items-center "
                               >
-                                {section.id === "size" && (
-                                  <button
-                                    key={option.value}
-                                    className={`border px-3 py-1 rounded-md hover:bg-gray-100 h-11 w-24
-                      ${selectedSize === option.value ? "bg-gray-200" : ""}`}
-                                    onClick={() =>
-                                      setSelectedSize(option.value)
-                                    }
-                                  >
-                                    {option.label}
-                                  </button>
-                                )}
-                                {section.id !== "size" && (
-                                  <>
-                                    <input
-                                      id={`filter-mobile-${section.id}-${optionIdx}`}
-                                      name={`${section.id}[]`}
-                                      defaultValue={option.value}
-                                      type="checkbox"
-                                      defaultChecked={option.checked}
-                                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                    />
-                                    <label
-                                      htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
-                                      className="ml-3 min-w-0 flex-1 text-gray-500"
-                                    >
-                                      {option.label}
-                                    </label>
-                                  </>
-                                )}
+                              
+                                <div className="">
+                                  {section.id !== "size" && (
+                                    <>
+                                      <input
+                                        id={`filter-mobile-${section.id}-${optionIdx}`}
+                                        name={`${section.id}[]`}
+                                        defaultValue={option.value}
+                                        type="checkbox"
+                                        defaultChecked={option.checked}
+                                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                      />
+                                      <label
+                                        htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
+                                        className="ml-3 min-w-0 flex-1 text-gray-500"
+                                      >
+                                        {option.label}
+                                      </label>
+                                    </>
+                                  )}
+                                </div>
                               </div>
                             ))}
                           </div>
+                          div.
                         </Disclosure.Panel>
                       </>
                     )}

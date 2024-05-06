@@ -95,7 +95,7 @@ const CheckoutForm = () => {
       "phoneBill",
     ];
 
-    console.log("shippingFields:", formData.email)
+  
 
     let requiredFields =
       selectedOption === "same-as-shipping" ? shippingFields : billingFields;

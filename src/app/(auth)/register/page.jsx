@@ -1,7 +1,12 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import { SignUpForm } from "@/components/signUp/SignUpForm";
+import dynamic from "next/dynamic";
+
+
+const SignUpForm = dynamic(() => import("@/components/signUp/SignUpForm"), {
+  ssr: false,
+});
 
 const Register = () => {
   return (

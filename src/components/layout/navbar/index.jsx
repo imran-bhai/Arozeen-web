@@ -12,7 +12,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 export default function Navbar() {
   const pathname = usePathname();
-  // console.log("pathName:", router.pathname)
+  
 
   return (
     <nav className="relative  mt-2 mb-1 lg:px-6">

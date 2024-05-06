@@ -15,7 +15,7 @@ import { ErrorMessage } from "@hookform/error-message";
 
 
 
-export function LoginForm() {
+const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -131,3 +131,6 @@ export function LoginForm() {
     </form>
   );
 }
+
+
+export default LoginForm;

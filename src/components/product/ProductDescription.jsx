@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-
 import ColorSize from "./ColorSize";
 
 import { Button } from "../ui/button";
@@ -12,7 +11,7 @@ import { useState } from "react";
 import HeartUnfilled from "../iconSVG/HeartUnfilled";
 
 
-export function ProductDescription({ product, productId }) {
+const ProductDescription = ({ product, productId }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
@@ -98,3 +97,5 @@ export function ProductDescription({ product, productId }) {
     </>
   );
 }
+
+export default ProductDescription;

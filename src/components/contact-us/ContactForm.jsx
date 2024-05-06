@@ -39,7 +39,7 @@ const ContactForm = () => {
         },
       }
     );
-    console.log("response:", response.data);
+   
   };
   return (
     <div className="py-5">

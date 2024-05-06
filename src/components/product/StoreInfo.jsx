@@ -41,7 +41,7 @@ const StoreInfo = ({product}) => {
           </h5>
         </div>
       </div>
-      <div className="h-12 text-primary text-2xl flex justify-center items-center font-semibold">
+      <div className="h-12 text-primary text-xl flex justify-center items-center font-semibold">
         VIEW STORE
       </div>
     </div>

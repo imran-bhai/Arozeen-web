@@ -1,14 +1,41 @@
-
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import axios from "axios";
-import { Gallery } from "@/components/product/Gallery";
-import { ProductDescription } from "@/components/product/ProductDescription";
 import { API_BASE_URL } from "@/app/config/constants";
-import RelatedProducts from "@/components/product/RelatedProducts";
-import CustomerReviews from "@/components/product/CustomerReviews";
-import DescriptionReviews from "@/components/product/DescriptionReviews";
-import BreadcrumbCustome from "@/components/BreadcrumbCustome";
+
+// import { ProductDescription } from "@/components/product/ProductDescription";
+// import { Gallery } from "@/components/product/Gallery";
+
+
+
+import dynamic from "next/dynamic";
+
+
+
+const RelatedProducts = dynamic(() => import("@/components/product/RelatedProducts"), {
+  ssr: false,
+});
+
+const CustomerReviews = dynamic(() => import("@/components/product/CustomerReviews"), {
+  ssr: false,
+});
+
+const DescriptionReviews = dynamic(() => import("@/components/product/DescriptionReviews"), {
+  ssr: false,
+});
+
+const BreadcrumbCustome = dynamic(() => import("@/components/BreadcrumbCustome"), {
+  ssr: false,
+});
+
+const ProductDescription = dynamic(() => import("@/components/product/ProductDescription"), {
+  ssr: false,
+});
+
+const Gallery = dynamic(() => import("@/components/product/Gallery"), {
+  ssr: false,
+});
+
 
 
 export default async function ProductPage({ params }) {

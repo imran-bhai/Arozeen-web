@@ -1,6 +1,11 @@
-"use client"
+"use client";
 import Image from "next/image";
-import { LoginForm } from "@/components/login/LoginForm";
+import dynamic from "next/dynamic";
+// import { LoginForm } from "@/components/login/LoginForm";
+
+const LoginForm = dynamic(() => import("@/components/login/LoginForm"), {
+  ssr: false,
+});
 
 const Login = () => {
   return (
@@ -11,7 +16,8 @@ const Login = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="relative max-sm:hidden sm:flex-1 flex justify-end ">
+        className="relative max-sm:hidden sm:flex-1 flex justify-end "
+      >
         <div className="absolute w-[420px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <Image
             src="/login/100.svg"

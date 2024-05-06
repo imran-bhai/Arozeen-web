@@ -2,10 +2,15 @@
 import React, { useState, useEffect, Suspense } from "react";
 import axios from "axios";
 import { API_BASE_URL } from "@/app/config/constants";
-import Promotions from "@/components/shop/Promotions";
-import ShopCollectionInShop from "@/components/shop/ShopCollectionInShop";
-import Banner from "@/components/product/ProductsBanner";
-import ShopFilterProducts from "@/components/product/ShopFilterProducts";
+
+import dynamic from "next/dynamic";
+
+// dynamic imports 
+const Promotions = dynamic(() => import('@/components/shop/Promotions'), { ssr: false })
+const ShopCollectionInShop = dynamic(() => import('@/components/shop/ShopCollectionInShop'), { ssr: false })
+const Banner = dynamic(() => import('@/components/product/ProductsBanner'), { ssr: false })
+const ShopFilterProducts = dynamic(() => import('@/components/product/ShopFilterProducts'), { ssr: false })
+
 
 const Products = () => {
   const [products, setProducts] = useState([]);

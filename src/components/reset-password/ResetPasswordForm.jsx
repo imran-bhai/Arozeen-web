@@ -48,8 +48,7 @@ export function ResetPasswordForm() {
 
   const onSubmitHandler = async (data) => {
     const { password, confirmPassword } = data;
-    // console.log("password:", password)
-    // console.log("confirmPassword:", confirmPassword)
+   
     setLoading(true);
     try {
       const response = await axios.post(`${API_BASE_URL}/reset-password`, {

@@ -75,7 +75,7 @@ function SubmitButton({ productId }) {
             }
           );
 
-          console.log("add:", res.data)
+     
           if (res.status === 201) {
             dispatch(updateCart({ product_id: product.id, quantity: 1 }));
             toast.success("Add to Cart successfully");

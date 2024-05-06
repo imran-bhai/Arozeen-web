@@ -18,7 +18,7 @@ import { toast } from "react-toastify";
 import { API_BASE_URL } from "@/app/config/constants";
 
 
-export function SignUpForm({ onSubmit }) {
+const SignUpForm = ({ onSubmit }) => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -55,7 +55,7 @@ export function SignUpForm({ onSubmit }) {
   const currentDate = new Date().toISOString().split("T")[0];
 
   const handleOnSubmit = async (data) => {
-    console.log("data:", data);
+  
     try {
       setLoading(true);
       const response = await axios.post(
@@ -452,3 +452,5 @@ export function SignUpForm({ onSubmit }) {
     </div>
   );
 }
+
+export default SignUpForm;

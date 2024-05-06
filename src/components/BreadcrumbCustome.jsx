@@ -4,10 +4,10 @@ import { usePathname } from "next/navigation";
 
 function BreadcrumbCustome() {
   const path = usePathname();
-  console.log("path:", path);
+ 
 
   const pathArray = path.split("/");
-  console.log("pathArray:", pathArray);
+
   return (
     <nav class="flex" aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">

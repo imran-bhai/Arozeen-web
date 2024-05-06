@@ -6,7 +6,7 @@ import { GridTileImage } from "../grid/Tile";
 import { useState } from "react";
 
 
-export function Gallery({ images }) {
+const Gallery = ({ images })  => {
   const [imageIndex, setImageIndex] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState(imageIndex);
 
@@ -103,3 +103,5 @@ export function Gallery({ images }) {
     </div>
   );
 }
+
+export default Gallery;

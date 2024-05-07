@@ -41,7 +41,9 @@ const ShippingCart = ({ order }) => {
 
         {order.data?.order_items.map((order, index) => {
           return (
-            <div className="bg-[#F3F5F7] p-4 md:py-0 flex flex-col md:flex-row md:items-center md:justify-between md:space-x-6 mb-3">
+            <div
+              key={index}
+            className="bg-[#F3F5F7] p-4 md:py-0 flex flex-col md:flex-row md:items-center md:justify-between md:space-x-6 mb-3">
               <div className="flex flex-row items-center space-x-4 ">
                 <Image
                   alt={order.product.name}

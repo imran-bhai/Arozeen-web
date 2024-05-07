@@ -104,7 +104,7 @@ export default function OrderTable() {
                         <div className="flex flex-row items-center space-x-4 mb-4 md:mb-0">
                           <Image
                             src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${item.product.images[0].image}`}
-                            alt="Mens Black T-Shirt"
+                            alt={item.product.name}
                             className="w-16 h-20 border border-primary"
                             height="100"
                             style={{
@@ -134,11 +134,11 @@ export default function OrderTable() {
                           <div className="">
                             <div className="flex  items-center justify-between md:space-x-2 ">
                               {order.status === "pending" ? (
-                                <Button className="bg-green-800 rounded-none">
+                                <div className="bg-[#214A25]  hover:bg-[#306135] rounded-none text-secondary py-2.5 px-5">
                                   {`${order.status
                                     .charAt(0)
                                     .toUpperCase()}${order.status.slice(1)}`}
-                                </Button>
+                                </div>
                               ) : (
                                 ""
                               )}
@@ -153,86 +153,7 @@ export default function OrderTable() {
                           </div>
                         </div>
                       </div>
-                      {expand && formID == item.id ? (
-                        <div id="" className="">
-                          <div className="mt-4 grid gap-6 md:grid-cols-3">
-                            <div className="bg-[#F7EAE3] py-2 flex flex-col  justify-center items-center">
-                              <h4 className="font-semibold text-md mb-2  text-[#214A25]">
-                                Product Rating
-                              </h4>
-                              <div className="flex space-x-1">
-                                <StarRating rating={5} />
-                              </div>
-                            </div>
-                            <div className="bg-[#F7EAE3] py-2 flex flex-col justify-center items-center">
-                              <h4 className="font-semibold text-md mb-2 text-[#214A25]">
-                                Seller Rating
-                              </h4>
-                              <div className="flex space-x-1">
-                                <StarRating rating={4} />
-                              </div>
-                            </div>
-                            <div className="bg-[#F7EAE3] py-2 flex flex-col justify-center items-center">
-                              <h4 className="font-semibold text-md mb-2 text-[#214A25]">
-                                Delivery Rating
-                              </h4>
-                              <div className="flex space-x-1">
-                                <StarRating rating={3} />
-                              </div>
-                            </div>
-                          </div>
-                          <div className=" mt-4     md:mt-4 md:ml-0 w-full ">
-                            <div className="md:flex">
-                              <input
-                                ref={fileInputRef}
-                                type="file"
-                                className="hidden"
-                                onChange={handleFileChange}
-                              />
-                              <Button
-                                onClick={handleButtonClick}
-                                className="text-orange-500  w-full h-32 border-2 border-dashed border-orange-200"
-                                variant="ghost"
-                              >
-                                <CameraIcon className="text-gray-400 w-6 h-6 mr-2" />
-                                Add Photo
-                              </Button>
-                              {selectedFile && (
-                                <div className="mt-4">
-                                  <Image
-                                    src={URL.createObjectURL(selectedFile)}
-                                    alt="Selected"
-                                    className="max-w-xs"
-                                    layout="true"
-                                  />
-                                </div>
-                              )}
-                              <Textarea
-                                className="mt-4 md:mt-0 md:ml-6 w-full"
-                                placeholder="Write your review here."
-                              />
-                            </div>
-                            <span className="flex justify-between md:justify-center md:gap-x-2 items-center mt-4 ">
-                              <div className="bg-[#F7EAE3]  py-2 px-3">
-                                <Checkbox id="" />
-                                <label
-                                  className="text-sm font-medium leading-none ml-2"
-                                  htmlFor="show-name"
-                                >
-                                  Show user name
-                                </label>
-                              </div>
-                              <div className="">
-                                <Button className="ml-auto rounded-none px-12">
-                                  Submit
-                                </Button>
-                              </div>
-                            </span>
-                          </div>
-                        </div>
-                      ) : (
-                        ""
-                      )}
+                     
                     </>
                   );
                 })}

@@ -4,13 +4,30 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import OrderStatus from "@/components/orders/OrderStatus";
 import { headers } from "next/headers";
 
+function isValidURL(str) {
+  try {
+    new URL(str);
+    console.log("valid url");
+    return true;
+  } catch (e) {
+    console.log("invalid url");
+    return false;
+  }
+}
+
 const page = () => {
   const requestHeaders = headers();
   const referer = requestHeaders.get("referer");
 
-  // Extract pathname from the referer if needed
-  const pathname = new URL(referer).pathname;
-  const endpoint = pathname.split("/").pop();
+  let endpoint;
+  if (referer || isValidURL(referer)) { 
+    const pathname = new URL(referer).pathname;
+    endpoint = pathname.split("/").pop();
+  }
+  else{
+    console.log("invalid url structure")
+  }
+  
 
   console.log("slug:", endpoint);
 

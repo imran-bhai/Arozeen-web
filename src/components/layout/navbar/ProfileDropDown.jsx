@@ -61,6 +61,14 @@ export function ProfileDropDown() {
             </DropdownMenuItem>
           </Link>
         </DropdownMenuGroup>
+        <DropdownMenuGroup>
+          <Link href="/orders">
+            <DropdownMenuItem>
+              View Orders
+              <DropdownMenuShortcut>⇧⌘O</DropdownMenuShortcut>
+            </DropdownMenuItem>
+          </Link>
+        </DropdownMenuGroup>
 
         {token ? (
           <DropdownMenuItem onClick={() => handleLogout()}>

@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const StoreInfo = ({product}) => {
 
  
-
+console.log("Store Info:", product)
   return (
     <div className="w-full  border border-primary mt-5">
       <div className="flex justify-between items-center bg-[#FFF5EF] border border-b-primary px-2 ">
@@ -41,9 +42,11 @@ const StoreInfo = ({product}) => {
           </h5>
         </div>
       </div>
+      <Link href="/shop">
       <div className="h-12 text-primary text-xl flex justify-center items-center font-semibold">
         VIEW STORE
       </div>
+      </Link>
     </div>
   );
 };

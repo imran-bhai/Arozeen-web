@@ -19,7 +19,9 @@ const ContactForm = () => {
   useEffect(() => {
     const Token = async () => {
       const token = await getToken();
-      setToken(token.tokenId);
+      if (token) {
+        setToken(token?.tokenId);
+      }
     };
     Token();
   });
@@ -39,7 +41,6 @@ const ContactForm = () => {
         },
       }
     );
-   
   };
   return (
     <div className="py-5">

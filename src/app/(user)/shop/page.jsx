@@ -34,7 +34,7 @@ const page = () => {
         <ShopCategories />
       </div>
       <ShopProductCart />
-      <ShopCollectionInShop />
+      {/* <ShopCollectionInShop /> */}
     </div>
   );
 };

@@ -6,6 +6,7 @@ import ShippingCart from "./ShippingCart";
 import CheckOrder from "./CheckOrder";
 import ThankYouScreen from "./ThankYouScreen";
 import { getToken } from "@/app/config/actions";
+import axios from "axios";
 
 const OrderStatus = ({ endpoint }) => {
   const [active, setActive] = useState(0);

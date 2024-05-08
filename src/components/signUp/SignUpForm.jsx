@@ -32,14 +32,14 @@ const SignUpForm = ({ onSubmit }) => {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      firstName: "",
-      lastName: "",
+      firstname: "",
+      lastname: "",
       email: "",
       password: "",
       confirmPassword: "",
       phoneNumber: "",
       gender: "",
-      dateOfBirth: "",
+      dob: "",
     },
     criteriaMode: "all",
   });
@@ -56,6 +56,7 @@ const SignUpForm = ({ onSubmit }) => {
 
   const handleOnSubmit = async (data) => {
   
+    console.log("data:", data)
     try {
       setLoading(true);
       const response = await axios.post(
@@ -100,7 +101,7 @@ const SignUpForm = ({ onSubmit }) => {
                 minlength="3"
                 maxlength="21"
                 placeholder="Enter your name"
-                {...register("firstName", {
+                {...register("firstname", {
                   required: "This is required.",
                   minLength: {
                     value: 3,
@@ -114,7 +115,7 @@ const SignUpForm = ({ onSubmit }) => {
               />
               <ErrorMessage
                 errors={errors}
-                name="firstName"
+                name="firstname"
                 render={({ messages }) =>
                   messages &&
                   Object.entries(messages).map(([type, message]) => (
@@ -141,7 +142,7 @@ const SignUpForm = ({ onSubmit }) => {
                 id="last-name"
                 placeholder="Enter your last name"
                 maxlength="21"
-                {...register("lastName", {
+                {...register("lastname", {
                   required: "Last Name is required.",
                   minLength: {
                     value: 3,
@@ -156,7 +157,7 @@ const SignUpForm = ({ onSubmit }) => {
 
               <ErrorMessage
                 errors={errors}
-                name="lastName"
+                name="lastname"
                 render={({ messages }) =>
                   messages &&
                   Object.entries(messages).map(([type, message]) => (
@@ -416,14 +417,14 @@ const SignUpForm = ({ onSubmit }) => {
                 placeholder="Enter your date of birthday"
                 type="date"
                 max={currentDate}
-                {...register("dateOfBirth", {
+                {...register("dob", {
                   required: "This is required.",
                   validate: (value) => value <= currentDate,
                 })}
               />
               <ErrorMessage
                 errors={errors}
-                name="dateOfBirth"
+                name="dob"
                 render={({ messages }) =>
                   messages &&
                   Object.entries(messages).map(([type, message]) => (

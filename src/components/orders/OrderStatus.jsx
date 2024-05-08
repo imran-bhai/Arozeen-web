@@ -1,15 +1,18 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import ShippingCart from "./ShippingCart";
-import CheckOrder from "./CheckOrder";
-import ThankYouScreen from "./ThankYouScreen";
 import { getToken } from "@/app/config/actions";
 import axios from "axios";
+import { usePathname } from "next/navigation";
 
-const OrderStatus = ({ endpoint }) => {
-  console.log("endpoint:", endpoint);
+const OrderStatus = () => {
+ 
+  const pathname = usePathname();
+  console.log("router:", pathname);
+  const endpoint = pathname.split("/")[2];
+  
+ 
   const [active, setActive] = useState(0);
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Add loading state

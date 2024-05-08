@@ -68,7 +68,7 @@ const ShippingCart = ({ order }) => {
               <div className="flex justify-between  md:gap-x-28 pb-4">
                 <div className="text-[#214A25] text-primary">
                   <span className="font-semibold text-gray-900">Rs:</span>{" "}
-                  {order.product.price}
+                  {order.price}
                 </div>
                 <div className="">
                   <p className="text-primary">

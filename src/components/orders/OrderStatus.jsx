@@ -9,6 +9,7 @@ import { getToken } from "@/app/config/actions";
 import axios from "axios";
 
 const OrderStatus = ({ endpoint }) => {
+  console.log("endpoint:", endpoint);
   const [active, setActive] = useState(0);
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Add loading state
@@ -38,13 +39,7 @@ const OrderStatus = ({ endpoint }) => {
 
   return (
     <MaxWidthWrapper>
-     
-
-     {isLoading ? ( 
-        <p>Loading...</p>
-      ) : (
-        <ShippingCart order={orders} />
-      )}
+      {isLoading ? <p>Loading...</p> : <ShippingCart order={orders} />}
     </MaxWidthWrapper>
   );
 };
